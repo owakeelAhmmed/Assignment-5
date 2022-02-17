@@ -1,8 +1,6 @@
 
 
 
-
-
 document.getElementById('calc-btn').addEventListener('click', function(){
    const foodInput = document.getElementById('food-input');
    const foodAmount = foodInput.value;
@@ -25,4 +23,27 @@ document.getElementById('calc-btn').addEventListener('click', function(){
     foodInput.value = '';
     rentInput.value = '';
     clothesInput.value = '';
+});
+
+
+
+document.getElementById('Save-calc').addEventListener('click', function(){
+    const saveCalc = document.getElementById('save-input');
+    const saveAmount = saveCalc.value;
+    const savingTotal = document.getElementById('saving-total');
+    const discount = (previousBalanceText * saveAmount) / 100;
+    savingTotal.innerText = discount;
+
+
+    const totalBalnceText = document.getElementById('total-balance');
+    const remainingBalancetext = document.getElementById('remaining-balance');
+    
+    let previousBalanceText = parseFloat(totalBalnceText.innerText);
+    
+    let remainingBalance = totalBalnceText - savingTotal;
+    remainingBalancetext.innerText = remainingBalance;
+
+    
+   
+    
 });

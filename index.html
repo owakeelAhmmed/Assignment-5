@@ -21,7 +21,7 @@
                 <div class="row gx-5">
                   <div class="col">
                     <div>
-                        <img class="w-100"src="Images/19197956.jpg" alt="">
+                        <img class="w-100 h-100"src="Images/19197956.jpg" alt="">
                     </div>
                   </div>
 
@@ -66,20 +66,20 @@
                     <div class="d-flex justify-content-center mb-5 mt-3">
                         <div class="d-flex justify-content-center">
                         <h5 class="">Save:</h5>
-                        <input class="form-control form-control-sm w-50" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                        <input id="save-input" class="form-control form-control-sm w-50" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
                         <h4>%</h4>
                         </div>
                         
                         <div class="">
-                            <button type="button" class="btn btn-primary ">Calculate</button>
+                            <button id="Save-calc" type="button" class="btn btn-primary ">Save</button>
                         </div>
                         
                     </div>
                     <div>
-                        <h4 class="text-center mt-3">Saving Amount: <span>2000</span></h4>
+                        <h4 class="text-center mt-3">Saving Amount: <span id="saving-total">00</span></h4>
                     </div>
                     <div>
-                        <h4 class="text-center mt-3 mb-4">Remaining Balance: <span>2500</span></h4>
+                        <h4 class="text-center mt-3 mb-4">Remaining Balance: <span id="remaining-balance">00</span></h4>
                     </div>
 
                     </div>
@@ -89,8 +89,13 @@
 
 
                   </div>
+                  <div class="notify-section text-center">
+                    <p id="notify-fail" class="notify">❌ Pin Didn't Match, Please try again</p>
+                    <p id="notify-success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                </div>
 
                 </div>
+                
               </div>
         </section>
     </main>
