@@ -1,7 +1,8 @@
 
 
-
 document.getElementById('calc-btn').addEventListener('click', function(){
+    const totalIncome = document.getElementById('income-input');
+    const totalAmount = totalIncome.value;
     const foodInput = document.getElementById('food-input');
     const foodAmount = foodInput.value;
     const rentInput = document.getElementById('rent-input');
@@ -12,13 +13,11 @@ document.getElementById('calc-btn').addEventListener('click', function(){
      const expensesNewTotal = parseFloat(foodAmount) + parseFloat(rentAmont) + parseFloat(clothesAmount);
      expensesTotal.innerText = expensesNewTotal;
  
-     const totalIncome = document.getElementById('total-income');
-     const totalAmount = totalIncome.value;
  
-     const totalBalnceText = document.getElementById('total-balance');
+     const totalBalnceText = document.getElementById('balance');
      const newBalancetotal = totalAmount - expensesNewTotal;
      totalBalnceText.innerText = newBalancetotal;
- 
+
      totalIncome.value = '';
      foodInput.value = '';
      rentInput.value = '';
@@ -27,18 +26,20 @@ document.getElementById('calc-btn').addEventListener('click', function(){
 
 
  document.getElementById('Save-calc').addEventListener('click', function(){
-    const saveCalc = document.getElementById('save-input');
+    const saveCalc = document.getElementById('save-money-input');
     const saveAmount = saveCalc.value;
-    const savingTotal = document.getElementById('saving-total');
-    const totalBalnceText = document.getElementById('total-balance');
-    let previousBalanceText = parseFloat(totalBalnceText.innerText);
-    const discount = (previousBalanceText * saveAmount) / 100;
-    savingTotal.innerText = discount;
-
-
+    const savingTotal = document.getElementById('saving-amount');
+    const totalBalnceText = document.getElementById('balance');
     const remainingBalancetext = document.getElementById('remaining-balance');
-    const remainingBalanceTotal = remainingBalancetext.innerText;
-    let remainingBalance = totalBalnceText - savingTotal ;
-    remainingBalanceTotal.innerText = remainingBalance;
+    let previousBalanceText = parseFloat(totalBalnceText.innerText);
+    const savesMoney = (previousBalanceText * saveAmount) / 100;
+    savingTotal.innerText = savesMoney;
+
+
+    remainingBalance = parseFloat(balance.innerText) - savesMoney ;
+    remainingBalancetext.innerText = remainingBalance;
   
 });
+
+
+
