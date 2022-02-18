@@ -48,7 +48,7 @@ document.getElementById('calc-btn').addEventListener('click', function(){
   
     //======> If the cost is more than the user's income then this error will show =======>
     if(income<expense){
-       alert("expense more then income")
+       alert("You don't have enough money to spend!!")
     }else if(saveAmount < 0){
         alert("Please enter the positiv value!!")
     }
