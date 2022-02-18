@@ -11,95 +11,106 @@
     <title>Save-Money</title>
 </head>
 <body>
-    
-    <header>
-        <h1 class="fw-bold text-center mt-5">Saving <span class="text-danger fw-bold">Money</span></h1>
-    </header>
+     <!------------ Header to Saving Money --------->
+     <header>
+         <h1 class="fw-bold text-center mt-5">Saving <span class="text-danger fw-bold">Money</span></h1>
+        </header>
+        <!------------ Header to Saving Money end --------->
     <main>
-        <section class="container ">
-            <div class=" Box-container overflow-hidden">
-                <div class="row gx-5">
-                  <div class="col col-12 col-lg-6">
-                    <div>
-                        <img class="img-fluid  p-3"src="Images/19197956.jpg" alt="">
-                    </div>
-                  </div>
+        <!-- Main part start -->
+<section class="container ">
+    <div class=" Box-container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col col-12 col-lg-6">
+            <div>
+                <!-- Images for websit -->
+                <img class="img-fluid  p-3"src="Images/19197956.jpg" alt="">
+            </div>
+            </div>
 
-                <!-- income part stert -->
-                  <div class="col col-12 col-lg-6">
-                    <div class="mt-5">
-                        <h3 class="text-center mb-2">Income</h3>
-                        <div class="d-flex justify-content-center">
-                            <h5 class="gy-2">Income:</h5>
-                            <input id="income-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
-                        </div>
-                    </div>
-                <!-- income part end -->
+    <!-- income part stert -->
+        <div class="Calculate-section col-12 col-lg-6">
+        <div class="mt-5">
+            <h3 class="text-center mb-2">Income</h3>
+            <div class="d-flex justify-content-center">
+                <h5 class="gy-2">Income:</h5>
+                <input id="income-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
+            </div>
+        </div>
+    <!-- income part end -->
+        
+    <!-- Expenses part start -->
+    <div class="">
+        <div class="mt-3">
+                  <!---------------- start to Expenses -------------------->
+            <h3 class="text-center mb-3">Expenses</h3>
+            <!--------------- Food input start ---------------->
+            <div class="d-flex justify-content-center mb-3">
+                <h5 class="">Food:</h5>
+                <input id="food-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
+            </div>
+            <!--------------- Food input end ---------------->
+
+            <!--------------------- Rent part start ----------------------->
+            <div class="d-flex justify-content-center mb-3">
+                <h5 class="">Rent:</h5>
+                <input id="rent-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
+            </div>
+            <!--------------------- Rent part end ----------------------->
+
+            <!--------------------- Clothes part start ----------------------->
+            <div class="d-flex justify-content-center mb-3">
+                <h5 class="">Clothes:</h5>
+                <input id="clothes-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
+            </div>
+            <!--------------------- Clothes part start ----------------------->
+            
+            <!--------------------- Calculate button start ----------------------->
+            <div class="d-flex justify-content-center">
+                <button id="calc-btn" type="button" class="btn btn-primary ">Calculate</button>
+            </div>
+            <!--------------------- Calculate button end ----------------------->
+            <div>
+                <h4 class="text-center mt-3">Total Expenses: <span id="total-expenses">00</span></h4>
+            </div>
+            <div>
+                <h4  class="text-center mt-3">Balance: <span id="balance">00</span></h4>
+            </div>
+            
+            <!--------------------- Save input start ----------------------->
+            <div class="d-flex justify-content-center mb-3">
+                <div class="d-flex justify-content-center">
+                    <h5 class="">Save:</h5>
+                    <input id="save-money-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
+                    <h4>%</h4>
+                </div>
                 
-                
-                <!-- Expenses part start -->
+                <!--------------------- Save button ----------------------->
                 <div class="">
-                    <div class="mt-3">
-                        <h3 class="text-center mb-3">Expenses</h3>
-                        <div class="d-flex justify-content-center mb-3">
-                            <h5 class="">Food:</h5>
-                            <input id="food-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
-                        </div>
-                        <div class="d-flex justify-content-center mb-3">
-                            <h5 class="">Rent:</h5>
-                            <input id="rent-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
-                        </div>
-                        <div class="d-flex justify-content-center mb-3">
-                            <h5 class="">Clothes:</h5>
-                            <input id="clothes-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
-                        </div>
-                        <div class="d-flex justify-content-center">
-                        <button id="calc-btn" type="button" class="btn btn-primary ">Calculate</button>
-                    </div>
-                    <div>
-                        <h4 class="text-center mt-3">Total Expenses: <span id="total-expenses">00</span></h4>
-                    </div>
-                    <div>
-                        <h4  class="text-center mt-3">Balance: <span id="balance">00</span></h4>
-                    </div>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <div class="d-flex justify-content-center">
-                        <h5 class="">Save:</h5>
-                        <input id="save-money-input" class="form-control form-control-sm w-50" type="number" placeholder="" aria-label="">
-                        <h4>%</h4>
-                        </div>
-                        
-                        <div class="">
-                            <button id="Save-calc" type="button" class="btn btn-primary ">Save</button>
-                        </div>
-                        
-                    </div>
-                    <div>
-                        <h4 class="text-center ">Saving Amount: <span id="saving-amount">00</span></h4>
-                    </div>
-                    <div>
-                        <h4 class="text-center  mb-4">Remaining Balance: <span id="remaining-balance">00</span></h4>
-                    </div>
-
-                    </div>
+                    <button id="Save-calc" type="button" class="btn btn-primary ">Save</button>
                 </div>
-                <!-- Expenses part end -->
+            </div>
+            <!--------------------- Saving Amount ----------------------->
+            <div>
+                <h4 class="text-center ">Saving Amount: <span id="saving-amount">00</span></h4>
+            </div>
+            <!--------------------- Remaining Balance ----------------------->
+            <div>
+                <h4 class="text-center  mb-4">Remaining Balance: <span id="remaining-balance">00</span></h4>
+            </div>
 
-
-
-                  </div>
-                
-
-                </div>
-                
-              </div>
-        </section>
+        </div>
+    </div>
+        <!----------- Expenses part end ------------------>
+    </div>
+    </div>
+    </div>
+</section>
     </main>
 
 
 
-    <!-- Javascript Connect Link  -->
+    <!---------------- Javascript Connect Link  --------------------->
     <script src="js/app.js"></script>
 </body>
 </html>
